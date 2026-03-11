@@ -1,0 +1,397 @@
+
+---------- ant ----------
+                precision    recall  f1-score   support
+
+        DEFECT      1.000     0.500     0.667         6
+        DESIGN      0.562     0.600     0.581        15
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.000     0.000     0.000         5
+          TEST      0.500     0.333     0.400         3
+
+      accuracy                          0.448        29
+     macro avg      0.412     0.287     0.329        29
+  weighted avg      0.550     0.448     0.480        29
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              2              0              0             
+IMPLEMENTATION 1              0              4              0              0             
+DESIGN         0              6              9              0              0             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              1              1              1              3             
+
+---------- apache-ant-1.7.0 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.250     0.333     0.286         6
+        DESIGN      0.600     0.444     0.511        27
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.154     0.333     0.211         6
+          TEST      0.000     0.000     0.000         3
+
+      accuracy                          0.381        42
+     macro avg      0.201     0.222     0.201        42
+  weighted avg      0.443     0.381     0.399        42
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              1              0              2             
+IMPLEMENTATION 0              2              3              0              1             
+DESIGN         0              11             12             1              3             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              0              4              0              2             
+
+---------- apache-jmeter-2.10 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.333     0.286     0.308         7
+        DESIGN      0.872     0.540     0.667        63
+ DOCUMENTATION      0.333     1.000     0.500         1
+IMPLEMENTATION      0.233     0.778     0.359         9
+          TEST      0.500     1.000     0.667         2
+
+      accuracy                          0.561        82
+     macro avg      0.454     0.721     0.500        82
+  weighted avg      0.740     0.561     0.600        82
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           2              0              0              0              0             
+IMPLEMENTATION 1              7              1              0              0             
+DESIGN         1              22             34             2              4             
+DOCUMENTATION  0              0              0              1              0             
+DEFECT         0              1              4              0              2             
+
+---------- argouml ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.182     0.111     0.138        18
+        DESIGN      0.800     0.717     0.756       173
+ DOCUMENTATION      0.440     0.440     0.440        25
+IMPLEMENTATION      0.409     0.659     0.505        41
+          TEST      0.462     0.462     0.462        13
+
+      accuracy                          0.630       270
+     macro avg      0.458     0.478     0.460       270
+  weighted avg      0.650     0.630     0.633       270
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           6              3              3              1              0             
+IMPLEMENTATION 1              27             12             0              1             
+DESIGN         4              28             124            10             7             
+DOCUMENTATION  2              1              10             11             1             
+DEFECT         0              7              6              3              2             
+
+---------- columba ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.750     1.000     0.857         3
+        DESIGN      0.778     0.583     0.667        12
+ DOCUMENTATION      1.000     0.800     0.889         5
+IMPLEMENTATION      0.429     0.750     0.545         4
+          TEST      1.000     1.000     1.000         2
+
+      accuracy                          0.731        26
+     macro avg      0.791     0.827     0.792        26
+  weighted avg      0.781     0.731     0.738        26
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           2              0              0              0              0             
+IMPLEMENTATION 0              3              1              0              0             
+DESIGN         0              4              7              0              1             
+DOCUMENTATION  0              0              1              4              0             
+DEFECT         0              0              0              0              3             
+
+---------- columba-1.4-src ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.500     0.429     0.462         7
+        DESIGN      0.714     0.526     0.606        19
+ DOCUMENTATION      1.000     1.000     1.000         2
+IMPLEMENTATION      0.308     0.667     0.421         6
+          TEST      1.000     0.500     0.667         2
+
+      accuracy                          0.556        36
+     macro avg      0.704     0.624     0.631        36
+  weighted avg      0.637     0.556     0.572        36
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              0              0              1             
+IMPLEMENTATION 0              4              2              0              0             
+DESIGN         0              7              10             0              2             
+DOCUMENTATION  0              0              0              2              0             
+DEFECT         0              2              2              0              3             
+
+---------- emf ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.000     0.000     0.000         0
+        DESIGN      0.727     0.800     0.762        10
+IMPLEMENTATION      0.000     0.000     0.000         2
+          TEST      0.500     0.500     0.500         2
+
+      accuracy                          0.643        14
+     macro avg      0.307     0.325     0.315        14
+  weighted avg      0.591     0.643     0.616        14
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              1              0              0             
+IMPLEMENTATION 0              0              2              0              0             
+DESIGN         1              0              8              0              1             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              0              0              0              0             
+
+---------- emf-2.4.1 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.571     0.667     0.615         6
+        DESIGN      0.750     0.600     0.667        10
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.500     0.333     0.400         6
+          TEST      0.000     0.000     0.000         0
+
+      accuracy                          0.545        22
+     macro avg      0.364     0.320     0.336        22
+  weighted avg      0.633     0.545     0.580        22
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              0              0              0             
+IMPLEMENTATION 0              2              2              1              1             
+DESIGN         1              1              6              0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              1              0              1              4             
+
+---------- hibernate ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.000     0.000     0.000         3
+        DESIGN      0.850     0.739     0.791        23
+ DOCUMENTATION      0.500     1.000     0.667         1
+IMPLEMENTATION      0.333     0.500     0.400         6
+          TEST      0.000     0.000     0.000         0
+
+      accuracy                          0.636        33
+     macro avg      0.337     0.448     0.371        33
+  weighted avg      0.668     0.636     0.644        33
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              0              0              0             
+IMPLEMENTATION 0              3              3              0              0             
+DESIGN         1              4              17             1              0             
+DOCUMENTATION  0              0              0              1              0             
+DEFECT         1              2              0              0              0             
+
+---------- hibernate-distribution-3.3.2.GA ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.600     0.273     0.375        11
+        DESIGN      0.729     0.642     0.683        67
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.241     0.389     0.298        18
+          TEST      0.000     0.000     0.000         0
+
+      accuracy                          0.552        96
+     macro avg      0.314     0.261     0.271        96
+  weighted avg      0.623     0.552     0.575        96
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              0              0              0             
+IMPLEMENTATION 0              7              10             1              0             
+DESIGN         1              21             43             0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              1              6              1              3             
+
+---------- jEdit ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.500     0.333     0.400         3
+        DESIGN      0.722     0.619     0.667        21
+IMPLEMENTATION      0.125     0.333     0.182         3
+          TEST      0.500     0.333     0.400         3
+
+      accuracy                          0.533        30
+     macro avg      0.462     0.405     0.412        30
+  weighted avg      0.618     0.533     0.565        30
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              1              0              1             
+IMPLEMENTATION 0              1              2              0              0             
+DESIGN         1              7              13             0              0             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              0              2              0              1             
+
+---------- jEdit-4.2 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.571     0.333     0.421        12
+        DESIGN      0.795     0.861     0.827        36
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.143     0.167     0.154         6
+
+      accuracy                          0.667        54
+     macro avg      0.377     0.340     0.350        54
+  weighted avg      0.673     0.667     0.662        54
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              0              0              0             
+IMPLEMENTATION 0              1              3              1              1             
+DESIGN         0              3              31             0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              3              5              0              4             
+
+---------- jRuby ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.000     0.000     0.000         0
+        DESIGN      0.857     0.750     0.800         8
+IMPLEMENTATION      1.000     0.667     0.800         3
+          TEST      1.000     1.000     1.000         2
+
+      accuracy                          0.769        13
+     macro avg      0.714     0.604     0.650        13
+  weighted avg      0.912     0.769     0.831        13
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           2              0              0              0              0             
+IMPLEMENTATION 0              2              1              0              0             
+DESIGN         0              0              6              0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              0              0              0              0             
+
+---------- jfreechart ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.333     0.333     0.333         3
+        DESIGN      0.900     0.818     0.857        11
+IMPLEMENTATION      0.500     0.667     0.571         3
+          TEST      1.000     1.000     1.000         1
+
+      accuracy                          0.722        18
+     macro avg      0.683     0.705     0.690        18
+  weighted avg      0.744     0.722     0.730        18
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              0              0              0             
+IMPLEMENTATION 0              2              1              0              0             
+DESIGN         0              0              9              0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              2              0              0              1             
+
+---------- jfreechart-1.0.19 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.000     0.000     0.000         4
+        DESIGN      0.882     0.625     0.732        24
+IMPLEMENTATION      0.308     0.667     0.421         6
+          TEST      0.000     0.000     0.000         0
+
+      accuracy                          0.559        34
+     macro avg      0.298     0.323     0.288        34
+  weighted avg      0.677     0.559     0.591        34
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              0              0              0              0             
+IMPLEMENTATION 0              4              1              0              1             
+DESIGN         0              7              15             0              2             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         1              2              1              0              0             
+
+---------- jmeter ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.500     0.333     0.400         6
+        DESIGN      0.800     0.727     0.762        22
+ DOCUMENTATION      0.333     1.000     0.500         1
+IMPLEMENTATION      0.250     0.333     0.286         6
+          TEST      1.000     1.000     1.000         6
+
+      accuracy                          0.659        41
+     macro avg      0.577     0.679     0.590        41
+  weighted avg      0.693     0.659     0.668        41
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           6              0              0              0              0             
+IMPLEMENTATION 0              2              3              1              0             
+DESIGN         0              3              16             1              2             
+DOCUMENTATION  0              0              0              1              0             
+DEFECT         0              3              1              0              2             
+
+---------- jruby ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.000     0.000     0.000         3
+        DESIGN      0.692     0.562     0.621        16
+ DOCUMENTATION      0.000     0.000     0.000         2
+IMPLEMENTATION      0.222     0.333     0.267         6
+          TEST      0.500     1.000     0.667         1
+
+      accuracy                          0.429        28
+     macro avg      0.283     0.379     0.311        28
+  weighted avg      0.461     0.429     0.436        28
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              0              0              0             
+IMPLEMENTATION 1              2              2              0              1             
+DESIGN         0              4              9              0              3             
+DOCUMENTATION  0              1              1              0              0             
+DEFECT         0              2              1              0              0             
+
+---------- jruby-1.4.0 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.267     0.333     0.296        12
+        DESIGN      0.686     0.673     0.680        52
+ DOCUMENTATION      0.000     0.000     0.000         0
+IMPLEMENTATION      0.500     0.429     0.462        28
+          TEST      0.000     0.000     0.000         2
+
+      accuracy                          0.543        94
+     macro avg      0.291     0.287     0.287        94
+  weighted avg      0.563     0.543     0.551        94
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           0              1              1              0              0             
+IMPLEMENTATION 1              12             10             0              5             
+DESIGN         2              8              35             1              6             
+DOCUMENTATION  0              0              0              0              0             
+DEFECT         0              3              5              0              4             
+
+---------- sql12 ----------
+                precision    recall  f1-score   support
+
+        DEFECT      0.400     0.667     0.500         6
+        DESIGN      0.744     0.604     0.667        48
+ DOCUMENTATION      0.333     0.500     0.400         2
+IMPLEMENTATION      0.409     0.474     0.439        19
+          TEST      0.500     1.000     0.667         1
+
+      accuracy                          0.579        76
+     macro avg      0.477     0.649     0.534        76
+  weighted avg      0.619     0.579     0.590        76
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           1              0              0              0              0             
+IMPLEMENTATION 1              9              8              0              1             
+DESIGN         0              13             29             1              5             
+DOCUMENTATION  0              0              1              1              0             
+DEFECT         0              0              1              1              4             
+
+=========== Overall ==========
+                precision    recall  f1-score   support
+
+        DEFECT      0.376     0.328     0.350       116
+        DESIGN      0.766     0.659     0.709       657
+ DOCUMENTATION      0.420     0.538     0.472        39
+IMPLEMENTATION      0.327     0.492     0.393       183
+          TEST      0.532     0.581     0.556        43
+
+      accuracy                          0.585      1038
+     macro avg      0.484     0.520     0.496      1038
+  weighted avg      0.623     0.585     0.598      1038
+
+               TEST           IMPLEMENTATION DESIGN         DOCUMENTATION  DEFECT        
+TEST           25             4              9              1              4             
+IMPLEMENTATION 6              90             71             4              12            
+DESIGN         12             149            433            17             46            
+DOCUMENTATION  2              2              13             21             1             
+DEFECT         2              30             39             7              38            
+
+Number of unrecognized predictions: 14
+We considered them as the majority class.

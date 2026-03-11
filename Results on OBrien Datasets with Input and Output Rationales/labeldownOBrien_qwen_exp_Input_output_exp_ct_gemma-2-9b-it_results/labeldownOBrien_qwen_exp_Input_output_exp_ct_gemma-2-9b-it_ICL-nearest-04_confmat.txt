@@ -1,0 +1,246 @@
+
+---------- 0 ----------
+               precision    recall  f1-score   support
+
+         Code      0.750     0.625     0.682        24
+       Defect      1.000     0.500     0.667         4
+       Design      0.312     0.556     0.400         9
+Documentation      0.000     0.000     0.000         0
+          M&T      0.667     0.286     0.400         7
+  Requirement      0.639     0.657     0.648        35
+
+     accuracy                          0.595        79
+    macro avg      0.561     0.437     0.466        79
+ weighted avg      0.656     0.595     0.609        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 0             0             0             0             0             0            
+Requirement   1             23            0             6             4             1            
+Defect        0             0             2             2             0             0            
+Design        1             2             0             5             1             0            
+Code          0             8             0             1             15            0            
+M&T           0             3             0             2             0             2            
+
+---------- 1 ----------
+               precision    recall  f1-score   support
+
+         Code      0.222     0.222     0.222         9
+       Defect      0.714     0.500     0.588        10
+       Design      0.444     0.364     0.400        11
+Documentation      1.000     0.500     0.667         2
+          M&T      0.750     0.750     0.750         8
+  Requirement      0.644     0.744     0.690        39
+
+     accuracy                          0.595        79
+    macro avg      0.629     0.513     0.553        79
+ weighted avg      0.597     0.595     0.589        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 1             1             0             0             0             0            
+Requirement   0             29            0             4             5             1            
+Defect        0             3             5             1             1             0            
+Design        0             5             1             4             1             0            
+Code          0             6             0             0             2             1            
+M&T           0             1             1             0             0             6            
+
+---------- 2 ----------
+               precision    recall  f1-score   support
+
+         Code      0.632     0.706     0.667        17
+       Defect      0.800     0.400     0.533        10
+       Design      0.429     0.231     0.300        13
+Documentation      1.000     1.000     1.000         1
+          M&T      0.500     0.111     0.182         9
+  Requirement      0.556     0.862     0.676        29
+
+     accuracy                          0.582        79
+    macro avg      0.653     0.552     0.560        79
+ weighted avg      0.581     0.582     0.542        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 1             0             0             0             0             0            
+Requirement   0             25            0             2             2             0            
+Defect        0             4             4             0             1             1            
+Design        0             7             0             3             3             0            
+Code          0             4             0             1             12            0            
+M&T           0             5             1             1             1             1            
+
+---------- 3 ----------
+               precision    recall  f1-score   support
+
+         Code      0.667     0.522     0.585        23
+       Defect      0.875     0.500     0.636        14
+       Design      0.250     0.286     0.267         7
+Documentation      1.000     0.333     0.500         3
+          M&T      1.000     0.714     0.833         7
+  Requirement      0.487     0.760     0.594        25
+
+     accuracy                          0.582        79
+    macro avg      0.713     0.519     0.569        79
+ weighted avg      0.652     0.582     0.588        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 1             2             0             0             0             0            
+Requirement   0             19            0             2             4             0            
+Defect        0             3             7             3             1             0            
+Design        0             4             0             2             1             0            
+Code          0             9             1             1             12            0            
+M&T           0             2             0             0             0             5            
+
+---------- 4 ----------
+               precision    recall  f1-score   support
+
+         Code      0.630     0.607     0.618        28
+       Defect      0.000     0.000     0.000         4
+       Design      0.200     0.333     0.250         6
+Documentation      1.000     0.500     0.667         2
+          M&T      0.333     0.200     0.250         5
+  Requirement      0.714     0.758     0.735        33
+
+     accuracy                          0.590        78
+    macro avg      0.480     0.400     0.420        78
+ weighted avg      0.591     0.590     0.585        78
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 1             0             0             0             1             0            
+Requirement   0             25            2             3             2             1            
+Defect        0             1             0             2             1             0            
+Design        0             2             0             2             2             0            
+Code          0             7             0             3             17            1            
+M&T           0             0             0             0             4             1            
+
+---------- 5 ----------
+               precision    recall  f1-score   support
+
+         Code      0.625     0.526     0.571        19
+       Defect      0.500     0.333     0.400         6
+       Design      0.375     0.750     0.500         8
+Documentation      0.000     0.000     0.000         1
+          M&T      1.000     0.250     0.400         8
+  Requirement      0.700     0.757     0.727        37
+
+     accuracy                          0.608        79
+    macro avg      0.533     0.436     0.433        79
+ weighted avg      0.655     0.608     0.600        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 0             1             0             0             0             0            
+Requirement   1             28            1             5             2             0            
+Defect        0             3             2             0             1             0            
+Design        0             0             0             6             2             0            
+Code          0             5             0             4             10            0            
+M&T           0             3             1             1             1             2            
+
+---------- 6 ----------
+               precision    recall  f1-score   support
+
+         Code      0.611     0.478     0.537        23
+       Defect      0.600     0.429     0.500         7
+       Design      0.400     0.667     0.500         3
+Documentation      1.000     0.667     0.800         3
+          M&T      0.750     0.600     0.667        10
+  Requirement      0.610     0.758     0.676        33
+
+     accuracy                          0.620        79
+    macro avg      0.662     0.600     0.613        79
+ weighted avg      0.634     0.620     0.617        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 2             1             0             0             0             0            
+Requirement   0             25            1             1             6             0            
+Defect        0             3             3             0             0             1            
+Design        0             1             0             2             0             0            
+Code          0             8             1             2             11            1            
+M&T           0             3             0             0             1             6            
+
+---------- 7 ----------
+              precision    recall  f1-score   support
+
+        Code      0.391     0.500     0.439        18
+      Defect      0.333     0.286     0.308         7
+      Design      0.400     0.400     0.400        10
+         M&T      0.857     0.500     0.632        12
+ Requirement      0.667     0.688     0.677        32
+
+    accuracy                          0.544        79
+   macro avg      0.530     0.475     0.491        79
+weighted avg      0.570     0.544     0.548        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 0             0             0             0             0             0            
+Requirement   0             22            0             2             8             0            
+Defect        0             3             2             1             1             0            
+Design        0             2             0             4             4             0            
+Code          0             5             2             1             9             1            
+M&T           0             1             2             2             1             6            
+
+---------- 8 ----------
+               precision    recall  f1-score   support
+
+         Code      0.625     0.435     0.513        23
+       Defect      0.600     0.300     0.400        10
+       Design      0.417     0.500     0.455        10
+Documentation      0.000     0.000     0.000         0
+          M&T      0.857     0.667     0.750         9
+  Requirement      0.526     0.741     0.615        27
+
+     accuracy                          0.557        79
+    macro avg      0.504     0.440     0.455        79
+ weighted avg      0.588     0.557     0.553        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 0             0             0             0             0             0            
+Requirement   0             20            1             2             4             0            
+Defect        1             4             3             1             1             0            
+Design        0             4             0             5             1             0            
+Code          0             7             1             4             10            1            
+M&T           0             3             0             0             0             6            
+
+---------- 9 ----------
+               precision    recall  f1-score   support
+
+         Code      0.824     0.609     0.700        23
+       Defect      0.714     0.500     0.588        10
+       Design      0.111     0.333     0.167         3
+Documentation      0.600     1.000     0.750         3
+          M&T      0.500     0.333     0.400         9
+  Requirement      0.714     0.806     0.758        31
+
+     accuracy                          0.646        79
+    macro avg      0.577     0.597     0.560        79
+ weighted avg      0.694     0.646     0.656        79
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 3             0             0             0             0             0            
+Requirement   1             25            0             1             2             2            
+Defect        0             2             5             2             0             1            
+Design        0             1             0             1             1             0            
+Code          1             4             1             3             14            0            
+M&T           0             3             1             2             0             3            
+
+=========== Overall ==========
+               precision    recall  f1-score   support
+
+         Code      0.612     0.541     0.574       207
+       Defect      0.647     0.402     0.496        82
+       Design      0.333     0.425     0.374        80
+Documentation      0.600     0.600     0.600        15
+          M&T      0.745     0.452     0.563        84
+  Requirement      0.623     0.751     0.681       321
+
+     accuracy                          0.592       789
+    macro avg      0.593     0.529     0.548       789
+ weighted avg      0.606     0.592     0.588       789
+
+              Documentation Requirement   Defect        Design        Code          M&T          
+Documentation 9             5             0             0             1             0            
+Requirement   3             241           5             28            39            5            
+Defect        1             26            33            12            7             3            
+Design        1             28            1             34            16            0            
+Code          1             63            6             20            112           5            
+M&T           0             24            6             8             8             38           
+
+Number of unrecognized predictions: 0
+We considered them as the majority class.
+
+Error Case:

@@ -1,0 +1,790 @@
+project,context,real,pred
+0,# TODO: do we want gains\/biases to be trainable?,Reqmnt,Reqmnt
+0,((); 0); # TODO(sonots): Fix compatibility,Defect,Defect
+0,@TODO:,M&T,Code
+0,"\""\""\""Module dedicated to extraction of Model Based Metafeatures. ||  || Todo: ||     * Implement metafeatures. ||     * Improve documentation. || \""\""\""",Reqmnt,Design
+0,"fixed expressions like \""aujourd'hui\"". TODO! extend list of allowed compounds",Reqmnt,Reqmnt
+0,FIXME homogeneize the meaning of margin parameter,Design,Reqmnt
+0,FIXME XXX: Implement by rewriting functions above copied from autoresolve.py; search for resolve_strategy_inline_source above in this file,Design,Code
+0,FIXME: if we inherit from scipy.io.netcdf.NetCDFFile and omit the self.nc,Defect,Reqmnt
+0,FIXME: using numpy.roll with a random shift might be faster,Code,Design
+0,Initialize model (TODO: do i really need this?),Code,Reqmnt
+0,not needed; but why not...,Code,Reqmnt
+0,NOTE: probably more efficient to sort then stride by nt_regions,Reqmnt,Reqmnt
+0,"r\""\""\""Run inference on random sequences many times; saving the top results. ||  || This module is designed to run inference on a trained aptamers TF model || to score many sequences and then write out the top scoring sequences to || be used in other analysis. For example; these top predicted sequences || can read in the colab picking sequences in order || to validate the TF model. ||  || This module uses the standard aptamers tensorflow infrastructure to run || the inference. This is the inferer class defined in || learning\/eval_feedforward and described in the Aptamers TensorFlow Doc. ||  || Inference is generally run in batches of sequences; so a MapFlat function || is used to combine the results of interference into a flattened list || of (sequence; score) pairs. (In other words; each map function returns || a list of (sequence; score) pairs and these results are combined into || one list of pairs. Using a standard Map function would result in a || list of lists which is not what we want.) From there; the Top.Of || combiner returns only the top results; sorted by highest score. These || are then written to a text file. ||  || For now; each batch creates its own inferer; causing each map function || to have more overhead. Because of this;batch sizes around the default of || 10000 are performant. Fixing this in the future means converting the || MapFlat to a ParDo and initializing the inferer in start_bundle. || This module runs inference 1 billion times in 50 minutes so it || is sufficient for now ||  || Run locally with: ||  ||   :search_inference -- --flume_exec_mode=UNOPT \\ ||   --target_name='target' \\ ||   --model_dir=xxx \\ ||    --checkpoint_path='model.ckpt-312500' \\ ||    --output_name=xxx\/base30_1B_inference_top2k ||  || \""\""\""",Design,Design
+0,The dropna() is a workaround for https:\/\/github.com\/pydata\/pandas\/issues\/13098,Code,Code
+0,this importing of matplotlib is needed to run on the cluster,Code,Code
+0,TODO,Code,Reqmnt
+0,TODO,Reqmnt,Reqmnt
+0,TODO add method in net_util,Reqmnt,Reqmnt
+0,TODO add more input checks for consistency of X and y,M&T,M&T
+0,TODO add support for other metrics (ex. euclidean; angular),Reqmnt,Reqmnt
+0,TODO Add this to other loaders as well.,Code,Reqmnt
+0,TODO change to np.partition for PERF,Reqmnt,Code
+0,TODO consider multiple models,Reqmnt,Reqmnt
+0,TODO convert this to x\/y params?,Reqmnt,Reqmnt
+0,TODO DirectedEdgeDetect,M&T,Reqmnt
+0,TODO ElasticTransformation,Reqmnt,Design
+0,TODO generalise to non-equal-index cases,Reqmnt,Reqmnt
+0,TODO Make separate class for it,Design,Code
+0,TODO move these registrations to backend-specific files,Design,Design
+0,TODO normalice to make sum up to 1?,Reqmnt,Reqmnt
+0,TODO replace this code with the following commented out code after viz is fixed,Code,Code
+0,TODO simplify this loop and the ones for heatmaps; keypoints; similar to Alpha,Code,Design
+0,TODO test nestedness,M&T,M&T
+0,TODO this is too general; register all ops,Reqmnt,Reqmnt
+0,TODO to be modified,Code,Code
+0,TODO: (sven) rename to simply stats_fn to match eager and torch.,Code,Code
+0,TODO: arbitrary threshold is problematic,Code,Defect
+0,TODO: At the moment LHUC is RNN specific. We should support other models as well.,Reqmnt,Reqmnt
+0,TODO: auto detect dtype,Reqmnt,Code
+0,todo: change the feature_na_method!,Code,Code
+0,TODO: check CAPTALIZED WORDS as their lower case counterparts before saving,M&T,M&T
+0,TODO: conversion needed like IntegerLiteral?,Reqmnt,Code
+0,TODO: Decide on whether to keep this; could just pass to plot_lr_finders,Design,Design
+0,TODO: do not replace unless explicitly noticed + add 'only hangul' option,Code,Code
+0,TODO: ensure dummy_na =False is what you want,M&T,Code
+0,TODO: handle multi-speaker,Reqmnt,Reqmnt
+0,TODO: implement required params,Reqmnt,Reqmnt
+0,TODO: improve number parsing,Reqmnt,Reqmnt
+0,TODO: is that best way to handle,Reqmnt,Design
+0,TODO: make efficient,Reqmnt,Reqmnt
+0,TODO: Make the below safe to div by zero,Defect,Code
+0,TODO: min,Reqmnt,Design
+0,todo: more flexible signature?,Design,Reqmnt
+0,TODO: normalize true states,Reqmnt,Reqmnt
+0,TODO: parallelize,Reqmnt,Reqmnt
+0,TODO: pretty sure this isn't necessary,Code,Code
+0,TODO: put package requirements here,Reqmnt,Design
+0,TODO: re-implement support for constraint satisfaction method as needed,Reqmnt,Reqmnt
+0,TODO: Remove hardcoding of downscaling calculations.,Code,Code
+0,TODO: remove this method in v1.3.0.,Code,Code
+0,TODO: remove when dict results are deprecated,Code,Code
+0,TODO: reward computation,Reqmnt,Reqmnt
+0,TODO: run-on and split module,Reqmnt,Reqmnt
+0,TODO: should this class always act on just the differences? filtering,Reqmnt,Defect
+0,TODO: something if deep 9,Reqmnt,Defect
+0,TODO: support more backbone,Design,Reqmnt
+0,TODO: this loop is parallelizable,Reqmnt,Reqmnt
+0,TODO: This might not work with numpy types; haven't checked - AD,M&T,M&T
+0,TODO: tree should't need this in this case,Code,Code
+0,TODO: Why does this handle the 0 case the opposite of others?,Defect,Defect
+0,todo; pass complete checkpoint as state dictionary,Reqmnt,Reqmnt
+0,Trying to fetch a HTML file TODO:,Code,Defect
+0,Unused,Code,Code
+0,Workaround for GH #17886 (unnecessarily casts to float):,Code,Code
+0,Workaround NumPy 1.9 issue.,Code,Code
+0,XXX Can't do this simultaneously in multiple threads.  Need,Reqmnt,Defect
+0,XXX copy_() ?,Code,Code
+0,XXX Would be nice if we could prepare this statement before,Reqmnt,Code
+0,XXX: This conflicts with the debug flag used in children class,Design,Defect
+1,!TODO,Code,Design
+1,# TODO : load landmarks in validation and test set also. I'm too sleepy to do it today -_- zzz... zzz...,Reqmnt,Defect
+1,"\""\""\"" || Simple Gaussian Mixture model plotting example ||  || TODO: use the faithful dataset || \""\""\""",Reqmnt,Reqmnt
+1,"\""\""\""Converts legacy encodings into Unicode. ||  || TODO: Rm regex dependency || TODO: Add tests || \""\""\""",M&T,M&T
+1,"\""\""\""The Imperial Aramaic alphabet; plus simple script to transform || a Hebrew transcription of an Imperial Aramaic text to its own Unicode block. ||  || TODO: Add Hebrew-to-Aramaic converter || \""\""\""",Reqmnt,Reqmnt
+1,"assuming a 4-byte magic label (FIXME: add \""_accept\"" hook)",Reqmnt,Code
+1,FIXME _skip_test should be used here (if we could),Code,Defect
+1,FIXME: pixel_classes dict needs to be populated with classes obtained from target,Defect,Defect
+1,FIXME: The code works with EpisodicReplayBuffer,Defect,Defect
+1,FIXME: this needs to become more generic; we need to find the actual so in the python root,Reqmnt,Code
+1,FIXME: What if we never find a fail-high?,Defect,Code
+1,FIXME_Numba#5157: remove np.asarray and return as list,Code,Code
+1,Maybe return without target,Design,Reqmnt
+1,once they are no longer needed in the schedule or by,Reqmnt,Code
+1,self._audio = audio.AudioComponent(self) # TODO turn on,Code,Code
+1,self.clearChanges() #TODO perhaps?,Reqmnt,Defect
+1,TODO,Reqmnt,Reqmnt
+1,TODO,Reqmnt,Reqmnt
+1,TODO,Reqmnt,Reqmnt
+1,TODO - a list of classes would be better eliminating the need for the one,Design,Code
+1,TODO -- instead; smoother visualization bounds (at MAG),Reqmnt,Reqmnt
+1,TODO - refector this function to accept model_name; instance; parent so it makes more sense,Design,Code
+1,"TODO add \""new pipeline\"" action",Reqmnt,Reqmnt
+1,TODO add docstrings,Doc,Defect
+1,TODO add param for relative path vs just folder names,Reqmnt,Reqmnt
+1,TODO add passing this dictionary to all calls to metrics_helper in this function,Design,Reqmnt
+1,TODO add test for keypoints once their handling was improved in Convolve,M&T,M&T
+1,TODO add test for this,M&T,M&T
+1,TODO CHECK CORRECTNESS!!,M&T,M&T
+1,TODO currently we loose the time index; need to add it back to Xt after slicing in time,Defect,Code
+1,TODO new tests due to new system,M&T,M&T
+1,TODO Restore our CNN from trained data,Reqmnt,Code
+1,TODO save or smth,Reqmnt,Design
+1,TODO switch similar statements to work inplace (w\/o making a copy),Code,Code
+1,TODO These ratios can't be hardcoded,Reqmnt,Design
+1,TODO this error message needs changing.,Defect,Code
+1,TODO this vector is very sparse; we can make it more memory efficient,Reqmnt,Reqmnt
+1,TODO turn on save\/load model mode,Reqmnt,Reqmnt
+1,TODO use X_nrom_squared,Reqmnt,Code
+1,TODO(beam2d): Implement it,Reqmnt,Reqmnt
+1,TODO(crcrpar): Improve resource computation\/allocation algorithm.,Reqmnt,Reqmnt
+1,TODO(dbieber): Move this logic into the dataset definition.,Reqmnt,Design
+1,TODO(okuta): Implement sort,Reqmnt,Reqmnt
+1,TODO. Make this a private method.,Design,Design
+1,TODO. Move ignored entities into core.,Design,Design
+1,TODO: Add data table ref in fields of filters,Reqmnt,Reqmnt
+1,TODO: check `other` is Series after a circular import of SeriesType fixed,M&T,M&T
+1,TODO: Currently we don't look at source text; but we may want to,Reqmnt,Design
+1,TODO: deal with png and jpeg files better - they are probably not RAW.,Reqmnt,Code
+1,TODO: do more to protect against race conditions. File lock?,Reqmnt,M&T
+1,TODO: EXPAND PROPER NOUNS FOR COMMON WORDS AROUND WORD,Code,Reqmnt
+1,TODO: figure out why this happens.,Defect,Defect
+1,TODO: fix this later,Defect,Code
+1,TODO: handle boolean scalars properly,Reqmnt,M&T
+1,TODO: ignore non-numerics,Reqmnt,Reqmnt
+1,TODO: implement test_to_set_fw_dic() test code,M&T,M&T
+1,TODO: Important because of this any time the child,Code,Reqmnt
+1,TODO: Log message,Reqmnt,M&T
+1,TODO: make this work with col names shorter than three letters,Defect,Design
+1,TODO: one input could be the input of multiple nodes,Reqmnt,Reqmnt
+1,TODO: put in the option to do substitution here (most likely scenario;,Reqmnt,Reqmnt
+1,TODO: refactor as independent function,Design,Code
+1,TODO: remove refs on batch to avoid high mem consumption ? -> need verification,Reqmnt,Code
+1,TODO: remove this when we drop Python 2 support (functools.wraps,Code,Code
+1,TODO: result_dict contains batches of images; while,Defect,Design
+1,todo: set in initializer as keyword arg?,Reqmnt,Reqmnt
+1,TODO: Set up self.batch_sum if self.bsum,Reqmnt,Code
+1,TODO: specifiy if the geometry should be set relative to the,Doc,Reqmnt
+1,TODO: Support batch tf example inputs.,Reqmnt,M&T
+1,TODO: support getitem of container,Reqmnt,Reqmnt
+1,"TODO: The \""\"" choice can be removed when all users have been updated to pass a correct phabricator_deployment.",Code,Code
+1,TODO: the y_train should be given us externally; so far we create it as random values,Design,Reqmnt
+1,TODO: This is discarding phase. Is that ok?,Defect,Code
+1,todo: this is O(N^2) and maybe too slow for large graphs.,Reqmnt,Reqmnt
+1,TODO: Write more tests!,M&T,M&T
+1,TODO: x;y input should be able to be np arrays; pandas arrays; or tf dataset iterators,Design,Reqmnt
+1,TODO; implement automatic inference; maybe done,Reqmnt,Reqmnt
+1,todo; pass also best score,Design,Reqmnt
+1,XXX: This is going to fail if the init is a staticmethod; but,Design,Defect
+2,## elif (): ## FIXME: handle other bases here,Reqmnt,Code
+2,## TODO:,Design,Code
+2,"\""\""\"" || :mod:`orion.algo.hyperband.hyperband -- TODO || ================================================= ||  || .. module:: hyperband ||     :platform: Unix ||     :synopsis: TODO ||  || TODO: Write long description || \""\""\""",Doc,Code
+2,A future enhancement TODO for running on multiple GPU: CUDA_VISIBLE_DEVICES=2;3 python main.py   and then also model = torch.nn.DataParallel(model; device_ids=[0;1]).cuda(),Reqmnt,Code
+2,FIXME non-uniform sample weights not yet supported,Reqmnt,Code
+2,FIXME:we suppose history data should be there at first,Defect,Code
+2,hack; when inputs have more channels try pulling in only the,Code,Code
+2,seem out of place. If you were able to do better; feel free to share your,Design,Code
+2,This is a hack to allows inference when the <go> token,Code,Code
+2,TODO,Reqmnt,Reqmnt
+2,TODO,Reqmnt,Reqmnt
+2,TODO - does this handle N-dim tensors correctly?,M&T,Reqmnt
+2,TODO (Alex): There's a race condition here if the worker is,Defect,Reqmnt
+2,TODO (nakago): test feature extraction behavior...,M&T,Reqmnt
+2,TODO (pradeep): Sort the indices and do intersections in order; so that we can return the,Reqmnt,Reqmnt
+2,TODO : gt maps are not currently transformed! (need refact w\/ dict keys),Defect,Reqmnt
+2,TODO : removal,Code,Reqmnt
+2,TODO add vertical gradient alpha to have fog only at skylevel\/groundlevel,Reqmnt,Reqmnt
+2,TODO anticipate multi-agents for AEB space,Reqmnt,Reqmnt
+2,todo change normalizazion_database to normalise option,Code,Reqmnt
+2,TODO change these to class attributes,Design,Reqmnt
+2,TODO change?,Code,Reqmnt
+2,ToDo consider 3D case --> do that by using tag->size,M&T,Reqmnt
+2,TODO cpickle vs json,Reqmnt,Reqmnt
+2,TODO create graphs of average earnings per period\uFFFF,Reqmnt,Reqmnt
+2,TODO Figure out a way to handle defaults so that all inputs need not be passed to the,Design,Reqmnt
+2,TODO Option for string lenght,Reqmnt,Reqmnt
+2,TODO refactor second part of if statement when implementing live model prediction,Code,Reqmnt
+2,TODO Set bioassembly info,Reqmnt,Reqmnt
+2,TODO Split into separate functions,Design,Reqmnt
+2,TODO this combo doens't work,Defect,Reqmnt
+2,TODO unify this somehow with the global _handle_mode_arg() that is,Design,Reqmnt
+2,TODO WIP temp_coherence_loss # assumes all sequences in the dataset share at least one same 3D pos of Baxter arm,Reqmnt,Reqmnt
+2,TODO write a warning,Defect,Reqmnt
+2,TODO(fstahlberg): Move to config,Design,Reqmnt
+2,TODO(mrry): Perhaps log that the default graph is being used; or set,Reqmnt,Reqmnt
+2,TODO(priyag): Fix eval step hook to account for steps_per_run.,Defect,Reqmnt
+2,TODO:,Design,Reqmnt
+2,TODO: add inheritance from Graph once implemented,Design,Reqmnt
+2,TODO: check for errors,Defect,Reqmnt
+2,TODO: check for series\/dict\/list input,Reqmnt,Reqmnt
+2,TODO: Check if self._mean_squared_error_w_precision can be used here,M&T,Reqmnt
+2,TODO: clean up these initialization,Code,Reqmnt
+2,TODO: complete the list here,Reqmnt,Reqmnt
+2,TODO: Could be implemented as optimization option in LK???,Design,Reqmnt
+2,TODO: don't make these a constant initializer because we,Reqmnt,Reqmnt
+2,TODO: handle arg tuples,M&T,Reqmnt
+2,TODO: handle record value which are lists; at least error,Defect,Reqmnt
+2,TODO: I believe this is not really much used,Code,Reqmnt
+2,TODO: implement diffxpy method,Reqmnt,Reqmnt
+2,TODO: implement residual connection,Reqmnt,Reqmnt
+2,TODO: make configurable,Reqmnt,Reqmnt
+2,TODO: make efficient,Reqmnt,Reqmnt
+2,TODO: make the dtype configurable; see __init__(),Design,Reqmnt
+2,TODO: make this exception more specific,Defect,Reqmnt
+2,TODO: maxpool?,Reqmnt,Reqmnt
+2,TODO: more validation,M&T,Reqmnt
+2,TODO: need to change this function to allow plotting.,Code,Reqmnt
+2,TODO: NOT PASSED,Defect,Reqmnt
+2,TODO: Place tensors into GPU memory. This will require rewriting,Design,Reqmnt
+2,TODO: Probably should just implement __deepcopy__,Design,Reqmnt
+2,TODO: Read this 10000 from the datasets,Code,Reqmnt
+2,TODO: remove hard-coded sizes and make relative to parent?,Code,Reqmnt
+2,"TODO: rename kwarg \""forward\"" to \""forward_additive\""",Code,Reqmnt
+2,TODO: Rename the module to something that does not conflict with stdlib,Code,Reqmnt
+2,TODO: Replace when space in db,M&T,Reqmnt
+2,TODO: replace with (stable) Draft6Validator; if available,Code,Reqmnt
+2,TODO: standardize `_offset` vs `offset` naming convention,Code,Reqmnt
+2,TODO: still in progress,Reqmnt,Reqmnt
+2,"TODO: the old setup is now called \""pre_training\""; where should this hook be called now?",Code,Reqmnt
+2,TODO: the second element of the rule is not being used,Reqmnt,Reqmnt
+2,TODO: This is very inefficient and needs fix,Reqmnt,Reqmnt
+2,TODO: To further functionality; eventually expand raw object with,Reqmnt,Reqmnt
+2,TODO: use joblib.Parallel or multiprocessing to parallelize the following,Reqmnt,Reqmnt
+2,XXX : include mpld3 js libraries in html folder,Reqmnt,Code
+2,XXX: Check why only 2 digits,M&T,Code
+2,XXX: code for timestamp series getitem in regular Numba,Code,Code
+2,XXX: not handling dictionnaries,Reqmnt,Code
+2,XXX: should we rather test if instance of estimator?,M&T,Code
+3,# Hack to center SVG as justify-content is broken:,Defect,Code
+3,"# TODO: Set name (using \""functionality.__name__\"") if name is None",Code,Code
+3,#TODO: this can become a nice tutorial for generating phantoms,Doc,Code
+3,@TODO: remove time usage; use it under the hood,Code,Code
+3,[todo]: this is a bug; predict_proba should not change,Defect,Defect
+3,"\""\""\""   || #TODO: || class HopfieldModel(LatentModel): ||      ||     def __init__(self; nvis; nhid): ||         self.layers = {} ||         self.layers['visible'] = layers.IsingLayer(nvis) ||         self.layers['hidden'] = layers.GaussianLayer(nhid) ||          ||         self.params = {} ||         self.params['weights'] = numpy.random.normal(loc=0.0; scale=1.0; size=(self.layers['visible'].len; self.layers['hidden'].len)).astype(dtype=numpy.float32) ||         self.params['bias'] = numpy.ones_like(self.layers['visible'].loc)   ||  ||  || class HookeMachine(LatentModel): ||      ||     def __init__(self; nvis; nhid; vis_type='gauss'; hid_type='expo'):    ||         assert vis_type.lower() in ['gauss'; 'ising'] ||         assert hid_type.lower() in ['expo'; 'bern'] ||          ||         self.layers = {} ||         self.layers['visible'] = layers.get(vis_type)(nvis) ||         self.layers['hidden'] = layers.get(hid_type)(nhid) ||          ||         self.params = {} ||         self.params['weights'] = numpy.random.normal(loc=0.0; scale=1.0; size=(self.layers['visible'].len; self.layers['hidden'].len)).astype(dtype=numpy.float32) ||         self.params['bias'] = numpy.ones_like(self.layers['hidden'].loc)   ||         self.params['T'] = numpy.ones(1; dtype=numpy.float32) ||                  ||         self.deriv = {} ||         self.deriv['weights'] = numpy.zeros_like(self.params['weights']) ||         self.deriv['bias'] = numpy.zeros_like(self.params['bias']) ||         self.params['T'] = numpy.zeros_like(self.params['T']) ||          ||         self.set_vis(numpy.zeros_like(self.layers['visible'].loc)) ||          ||     def set_vis(self; vis): ||         self.vis = vis ||         self.diff = (self.params['weights'].T - vis).T ||         self.squared_dist = numpy.sum(self.diff ** 2; axis=0) ||         self.layers['hidden'].update_params(self.params['bias'] + self.squared_dist \/ (2 * self.params['T'])) ||         self.energy = -numpy.sum(numpy.log(self.layers['hidden'].partition_function()))         ||          ||     def visible_conditional_params(self; hid): ||         total = numpy.sum(hid) ||         loc = numpy.dot(self.params['weights']; hid) \/ total ||         scale = self.params['T'] \/ total * numpy.ones_like(self.layers['visible'].loc) ||         return (loc; scale) ||          ||     def update_visible_params(self; hid): ||         self.layers['visible'].update_params(*self.visible_conditional_params(hid)) ||          ||     def derivatives(self; vis; key): ||         self.update_hidden_params(vis) ||         hidden_mean = self.layers['hidden'].mean() ||         if key == 'bias': ||             # del H(v; k) \/ del b ||             return hidden_mean ||         elif key == 'weights': ||             # del H(v; k) \/ del W ||             return (self.difference(vis) * hidden_mean.T) \/ self.params['T'] ||         elif key == 'T': ||             # del H(v;k) \/ del T ||             return numpy.dot(hidden_mean.T; self.squared_distance(vis)) ||         else: ||             raise ValueError('unknown key: {}'.format(key)) ||     \""\""\""",Design,Reqmnt
+3,"\""\""\"" || .. todo:: ||     doc || \""\""\""",Doc,M&T
+3,"\""\""\""Tools for diffing notebooks. ||  || All diff tools here currently assumes the notebooks have already been || converted to the same format version; currently v4 at time of writing. || Up- and down-conversion is handled by nbformat. ||  || FIXME: Define and document diff format. || \""\""\""",Doc,Reqmnt
+3,\/\/TODO in future add arguments compatibility check,Design,M&T
+3,Double newlines seem to mess with the rendering,Defect,Code
+3,Ensure we're really passing an ndarray to _pool.step(),Defect,Defect
+3,FIXME,Code,Code
+3,FIXME: support for many evaluators; maybe event support,Reqmnt,Reqmnt
+3,FIXME: What about the next diff entry?,Defect,Code
+3,FIXME:the > case,Defect,Code
+3,Force shrinking of the mask if needed (and possible),Reqmnt,Reqmnt
+3,Initialize model (TODO: really necessary?),Reqmnt,Reqmnt
+3,It's only needed for a specific purpose in the short term; will go.,Code,Code
+3,Needed to pass ResourceVariable checks.,Code,Code
+3,Test covariance calculation XXX add this,M&T,M&T
+3,this is needed to update loss history,Code,Code
+3,TODO,Reqmnt,Reqmnt
+3,"TODO accept_sparse=\""csc\""",Code,Reqmnt
+3,TODO build AI_trader that uses this algorithm to place better bids\/asks,Reqmnt,Reqmnt
+3,TODO change random_state to rng,Code,Code
+3,TODO change the way attns is returned dict => list or tuple (onnx),Reqmnt,Code
+3,TODO check results after standardizing num ft once a ml algorithm is ready to test,M&T,M&T
+3,TODO checkpoints; incremental save,Reqmnt,Reqmnt
+3,TODO improve the regex here,Reqmnt,Reqmnt
+3,TODO In future; need to update action to handle (continuous) DELTA buttons using gym's Box space,Reqmnt,Reqmnt
+3,TODO Refactor these two clunky; redundant methods,Code,Code
+3,TODO Remove,Code,Code
+3,TODO Should we be able to rebuild?,Reqmnt,Reqmnt
+3,TODO this is wrong for other entitiey types nor appearing in the edge,Defect,Reqmnt
+3,TODO this will fail if a parameter cant handle size=(N;),Defect,Defect
+3,TODO use pop,Code,Reqmnt
+3,TODO(ahundt) MOVE THE CODE ABOVE INTO _get_simple_parallel_dataset_ops(),Design,Code
+3,TODO(okuta): Implement qr,Reqmnt,Reqmnt
+3,TODO: add a complete frame_size; to cover the whole audio signal?,Reqmnt,Reqmnt
+3,TODO: Add ability to handle a pre-defined axes for plotting,Reqmnt,Reqmnt
+3,TODO: Add data table ref in fields of filters,Reqmnt,Reqmnt
+3,TODO: Add this to configuration framework,Design,Design
+3,TODO: Add toggle for the LSUV init. It seems not always better!,Defect,Reqmnt
+3,TODO: Check behavior if this is a single mrc file (no '@'),M&T,M&T
+3,TODO: Check exp map params,M&T,M&T
+3,TODO: compare the performance!,M&T,Reqmnt
+3,TODO: In terms of functional API; there should not be any initialization of an nn.Module.,Code,Design
+3,todo: inplace?,Reqmnt,Code
+3,TODO: It could be nice if this method was run on entire data; not just,Reqmnt,Design
+3,TODO: My implementation of idf isn't matching *exactly* with theirs;,Reqmnt,Defect
+3,TODO: pass in just the id instead of the entire obj_msg.,Design,Design
+3,todo: perhaps it's better to use pickle in the future?,Reqmnt,Reqmnt
+3,TODO: put keyword copy to copy on demand,Reqmnt,Reqmnt
+3,TODO: remove timestamp_series_type,Code,Code
+3,TODO: rename function to assemble_filterbank()?,Code,Code
+3,TODO: render in template,Reqmnt,Reqmnt
+3,TODO: replace with below line when Numba supports np.isin in nopython mode,Code,Reqmnt
+3,TODO: replace with unbatch or readout,Code,Reqmnt
+3,TODO: split view,Reqmnt,Reqmnt
+3,TODO: store the actual index in table in case row number is unstable,Reqmnt,Reqmnt
+3,TODO: This needs to be enforced to something more specific,M&T,Design
+3,TODO: This next code is dense and confusing. Clean up at some point.,Code,Code
+3,TODO: unroll\/roll are great candidates for a context manager since they're always used in conjunction.,Code,Design
+3,TODO: Use tablemodules NEW: https:\/\/github.com\/torch\/nn\/blob\/master\/doc\/table.md,Reqmnt,Design
+3,TODO: Use the copy function,Code,Reqmnt
+3,TODO: verifier tests,M&T,M&T
+3,TODO: want to call it activation but namespace; so what to do best?,Code,Design
+3,TODO: we currently exploit a bug in the implementation of unravel_index to not require knowing the first shape,Defect,Defect
+3,TODO: We shouldn't be getting these malformed inputs. Fix this.,Defect,Reqmnt
+3,TODO: wrap this properly in a with session_context():,Code,Design
+3,TODO: write a function to do this..,Design,Design
+3,TODO: Write resolve method for CopyMetaField,Reqmnt,Design
+3,TODO? warn if not matching extras already present?,Defect,Defect
+3,too much memory. A lazy load would be better; but later,Reqmnt,Reqmnt
+3,XXX Expose this API better from bqlfn.,Design,Code
+3,XXX in theory we should set inv['source_cov'] properly.,Defect,Code
+3,XXX pandas only accepts variable window cov\/corr,Defect,Code
+3,XXX Refactor to calculate the Rician SNR:,Code,Code
+3,XXX when it's refactored; Report._render_raw will need to be updated,Code,Code
+4,''' || Functions used by more than one algorithm || TODO refactor properly later || ''',Design,Code
+4,!TODO: An empty dictionary would actually also do here ... despite the fact that,Reqmnt,Code
+4,# TODO Change to call remote model,Code,Code
+4,@todo: arabtex and iso8859-6 need individual handling because in some cases using one-two mapping,Reqmnt,Code
+4,all games are zero sum that are trained and because 2 values; x2 the error.  XXX,Defect,Code
+4,All possibilities will be generated TODO,Reqmnt,Reqmnt
+4,circular shift the signal (needed for correct phase),Code,Code
+4,Construct grids and weights if needed for parameter space,Reqmnt,Code
+4,Extract the output size of the layer to fit resize after the concatenation TODO put it in doc,Doc,Reqmnt
+4,FIXME,Code,Code
+4,FIXME : adhoc (answer being last word); not ignoring single question,Reqmnt,Code
+4,FIXME: A hack that depends on the _0 convention,Defect,Code
+4,FIXME: Handle execution_count (always change to None?),Defect,Code
+4,FIXME: how to use tf.image.decode_image instead of decode_jpeg?,Code,Defect
+4,FIXME: Need to check if mod is the equivalent of floorMod in NumPy,M&T,Code
+4,FIXME: need to implement sample_weight in Ridge,Reqmnt,Code
+4,FIXME: what we do here s basically writing a MIDI format 0 file;,Code,Reqmnt
+4,h = tf.layers.dense(h; self.hidden_size * 2; activation=tf.nn.relu; use_bias=True) #4 TODO,Reqmnt,Code
+4,Needed for the test_custom_tokenizer is the TestWikiCorpus class.,Code,Code
+4,Random Warp # TODO change masks to have a input mask and a warped target mask,Code,Reqmnt
+4,THIS IS A VERY UGLY FUNCTION because it has hardcoded 0\/4\/5 integers for each of the metric. I need to make an enumerated class for this!,Code,Code
+4,TODO,Reqmnt,Reqmnt
+4,TODO - as an alternative to the above flattening approach; explore an,Reqmnt,Reqmnt
+4,TODO - can remove one of these m0 restores if A and B both TLU,M&T,Code
+4,todo (g-votte): Take care of distributed optimization.,Reqmnt,Reqmnt
+4,TODO add protocluster?,Reqmnt,Reqmnt
+4,TODO delegate a copy of variable like action_dim to agent too,Code,Reqmnt
+4,TODO needs testing,M&T,M&T
+4,TODO refactor to use nltk_lite.probability.FreqDist for self.counts,Code,Code
+4,"TODO rename this to \""tokens2indices\"" or something similar.",Code,Code
+4,TODO replace whole pandas data container as input argument with separated metadata container,Design,Reqmnt
+4,TODO Update and move now this isn't used here,Design,Code
+4,TODO(nolivia): improve performance with a broadcast,Reqmnt,Reqmnt
+4,TODO. create README file in <output_dir>,Doc,Reqmnt
+4,TODO. get rid of from_model_pt,Reqmnt,Code
+4,TODO. O(N) now; search,Reqmnt,Reqmnt
+4,TODO:,Reqmnt,Reqmnt
+4,TODO: AAM METRIC,Reqmnt,Reqmnt
+4,TODO: add set-name (or rename); delete subcommands,Code,Code
+4,TODO: and the grad ?,Reqmnt,Reqmnt
+4,TODO: Basically identical to `test_intra_cv_target_transform` except for repeated KFold,Code,M&T
+4,TODO: Be able to automatize the shareX thing,Reqmnt,Reqmnt
+4,TODO: Change the optimizer to the appropriate Optimizer class,Code,Code
+4,TODO: change this logic when there is a git pretty-format,Reqmnt,Code
+4,TODO: Change this to finite = True,Code,Code
+4,TODO: Currently this turns any upregulation associated with,Design,Code
+4,TODO: define variables 'y_train' and 'y_test',Reqmnt,M&T
+4,TODO: delete this method when no longer needed,Code,Code
+4,TODO: don't need this w\/ py.test,M&T,M&T
+4,TODO: handle channel modalities later,Reqmnt,Reqmnt
+4,TODO: hard coded for now; looking for better extraction methods,Code,Reqmnt
+4,TODO: I cannot get good results with this yet,Reqmnt,Code
+4,TODO: I'm not sure about this part,Code,Code
+4,TODO: it might be interesting to get the time it took to read,Reqmnt,Reqmnt
+4,TODO: list,Reqmnt,Reqmnt
+4,TODO: maybe refactor this,Code,Code
+4,TODO: Model Precision,Reqmnt,Reqmnt
+4,TODO: quasi; quasibinomial; quasipoisson,Reqmnt,Reqmnt
+4,TODO: remove logging and actually test values,M&T,Code
+4,TODO: Repeat_elements and tf.split doesn't support dynamic splits.,Defect,Code
+4,TODO: Simplify following line once using multivariate base distributions for multivariate flows,Code,Code
+4,TODO: This might not be called corpora,Code,Reqmnt
+4,TODO: This we can change easily to functional style,Design,Code
+4,TODO: To hard example mine or not to hard example mine; that's the question,Reqmnt,Reqmnt
+4,ToDo: Update with http:\/\/en.wikipedia.org\/wiki\/List_of_emoticons ?,Reqmnt,Reqmnt
+4,TODO: we can't use tracker filter here to filter for,Reqmnt,Code
+4,TODO: why is the whole distribution computed instead of just min\/max,Reqmnt,Reqmnt
+4,workaround for python 2.6,Code,Code
+4,XXX both work,Code,Reqmnt
+4,XXX Convert the baseline to a Foreign clause.,Design,Reqmnt
+4,XXX Disable SimulateModels without CreateTab,Code,Code
+4,XXX do projections here if necessary,Reqmnt,Code
+4,XXX ignores weight & type,Reqmnt,Reqmnt
+4,XXX Remove,Code,Code
+4,XXX: currently scaled to variance=n_samples,Code,Code
+4,XXX: one could be smarter here,Code,Code
+4,XXX: return a copy to prevent modification by the caller,Reqmnt,Code
+4,XXX: using .values to check date type since DatetimeIndex returns,Code,Code
+5,@TODO: code formatting issue for 20.07 release,Code,Code
+5,"\""\""\"" || ========================== || FastICA on 2D point clouds || ========================== ||  || XXX: Still buggy !!! ||  || \""\""\""",Defect,Reqmnt
+5,"\""\""\""Models. ||  || Models are objects which take Tensor(s) as input; perform some computation on  || those Tensor(s); and output probability distributions. ||  || TODO: more... ||  || * :func:`.Model` || * :func:`.ContinuousModel` || * :func:`.DiscreteModel` || * :func:`.CategoricalModel` || * :func:`.save_model` || * :func:`.load_model` ||  || ---------- ||  || \""\""\""",Reqmnt,Reqmnt
+5,apparently package_deps are broken in 3.4,Defect,Code
+5,BETTER FIX: iterate through; if length = 0; then bump it up to 0.125,Reqmnt,Code
+5,early_stopping(index=epoch; avg_valid_loss). (TODO: coming in next release),Reqmnt,Code
+5,FIXME generic call,Code,Code
+5,FIXME: is returning an empty list?,Reqmnt,Reqmnt
+5,FIXME: move args definition\/parsing inside of main?,Design,Design
+5,fixme; we might want to drop dataset that are not compatible,Defect,Defect
+5,handle BoxedSeries and list\/set of BoxedSeries; TODO: others?,Reqmnt,Reqmnt
+5,HTTP Utilities and MISC (TODO) ###############################################,Reqmnt,Reqmnt
+5,normed_cross_entropy # TODO,Reqmnt,Reqmnt
+5,tf.train.ProximalAdagradOptimizer todo appears tf.keras.optimizers does not support,Defect,Defect
+5,TODO,Reqmnt,Reqmnt
+5,TODO,Reqmnt,Reqmnt
+5,TODO (tdomhan): Remove with next major version bump.,Code,Code
+5,TODO : 5 categories. to be added in options.,Reqmnt,Reqmnt
+5,TODO add checking to make sure number of keys in h5 file matches number of lines in csv file,Reqmnt,M&T
+5,TODO Change self.phonemes field to self.tgt_labels; and related,Code,Code
+5,TODO check for each tentacle specified if update is available (with requirements),Reqmnt,M&T
+5,TODO check getStructureCahinIds,M&T,M&T
+5,TODO confirm that multiple eigenvalues of 1 means the rotation,Reqmnt,M&T
+5,TODO ElasticTransformation,M&T,Reqmnt
+5,TODO generalise to columns with series of unequal length,Reqmnt,Reqmnt
+5,TODO init-phase,Reqmnt,Reqmnt
+5,"TODO last token include: \""&& $last_token[...]\""",Reqmnt,Reqmnt
+5,TODO maybe improve this so it doesn't use a global,Design,Reqmnt
+5,todo not support dense,Reqmnt,Reqmnt
+5,TODO Promote this to a Funsor subclass.,Design,Reqmnt
+5,TODO random seed as an option,Reqmnt,Reqmnt
+5,TODO remove,Code,Code
+5,TODO Send the context back into some list maintained by,Reqmnt,Design
+5,TODO support recursive parfor; multi-D; mutiple body blocks,Reqmnt,Reqmnt
+5,TODO update these - the sklearn transformation class should be able,Code,Reqmnt
+5,TODO when backprop need to use relevant r too,Reqmnt,Reqmnt
+5,TODO:,M&T,Reqmnt
+5,TODO: avoid conversion of sparse matrices to CSR by adding support for,Reqmnt,Reqmnt
+5,TODO: Bad hack to work around generic types in pydantic (until next release),Defect,Code
+5,TODO: build child models,Reqmnt,Reqmnt
+5,TODO: CntkEmit,M&T,Reqmnt
+5,TODO: dataframe pass needed?,Reqmnt,Reqmnt
+5,TODO: decouple DDP from SLURM,Design,Code
+5,TODO: deprecate?,Code,Code
+5,TODO: determine if requiring same sense is too string; i.e.,Reqmnt,M&T
+5,TODO: Do a better job of guessing defaults from the model,Reqmnt,Reqmnt
+5,TODO: do the transpose as a DataLoaderTransformer instead of in host,Reqmnt,Reqmnt
+5,TODO: figure out how why the result of einsum requires reshape,M&T,Reqmnt
+5,TODO: handle string,Reqmnt,Reqmnt
+5,TODO: Implement ranges,Reqmnt,Reqmnt
+5,TODO: implement this,Reqmnt,Reqmnt
+5,TODO: Indexing not thoroughly tested,M&T,M&T
+5,TODO: inline freevar,M&T,Reqmnt
+5,TODO: it's worth to switch back to the correct preprocess_input when InceptionResNetV2 model is re-trained,Code,Code
+5,TODO: make fast_rcnn irrelevant,Code,Code
+5,TODO: modify this later,Code,Code
+5,TODO: move this to corpus module,Design,Design
+5,TODO: num pad examples is not set here if fillup strategy would be padding,Doc,Defect
+5,TODO: Push update to MXNet to expose the optimizer (Module should have a get_optimizer method),Design,Design
+5,TODO: refine,Code,Reqmnt
+5,TODO: Remove in v1.2,Code,Code
+5,TODO: Remove this blocker once batch transfer to device is integrated in Lightning for DP mode.,Code,Code
+5,TODO: rename split_index -> split_indices + change in RL repo,Code,Code
+5,TODO: replace init=None by init='auto' in v0.6.0 and remove the warning,Code,Code
+5,TODO: return id's key,Reqmnt,Reqmnt
+5,TODO: See https:\/\/www.pyimagesearch.com\/2017\/05\/22\/face-alignment-with-opencv-and-python\/,Reqmnt,Reqmnt
+5,TODO: separate this into two different inputs to test that,M&T,M&T
+5,TODO: skip on error???,Defect,Defect
+5,TODO: submit a PR to imgaug that registers parameters,Reqmnt,Reqmnt
+5,TODO: the -2 is only if the last element has shared axes; we should detect that,Reqmnt,Reqmnt
+5,TODO: this flag is somewhat redundant given the flag above; need,Code,Code
+5,TODO: try without copying? could be faster,Reqmnt,M&T
+5,todo: use Input and Output classes to handle inputs and outputs,Design,Reqmnt
+5,unused,Code,Code
+5,",XXX de-duplicate this with code from Montage somewhere?",Design,Code
+5,XXX may convert to set here when we can rely on set being builtin,Code,Reqmnt
+5,XXX offset type is uint32,Reqmnt,Code
+5,XXX when matplotlib 3.3 is min version; replace this with,Code,Code
+5,XXX: unify Series\/Array as Array,Reqmnt,Reqmnt
+6,"\""\""\"" || Corpus in CSV format. TODO: still serializes to SVMLight format; feel free to change this. || \""\""\""",Reqmnt,Code
+6,"\""\""\"" Turn compiler.ast structures back into executable python code. ||  ||     The unparse method takes a compiler.ast tree and transforms it back into ||     valid python code.  It is incomplete and currently only works for ||     import statements; function calls; function definitions; assignments; and ||     basic expressions. ||  ||     Inspired by python-2.5-svn\/Demo\/parser\/unparse.py ||  ||     fixme: We may want to move to using _ast trees because the compiler for ||            them is about 6 times faster than compiler.compile. || \""\""\""",Code,Design
+6,"\""\""\""Convert MdC transliterated text to Unicode. ||  || TODO: Add tests and clean up. || \""\""\""",M&T,M&T
+6,"\""\""\""Process downloaded or local corpora from one format into another. || Some formatting can happen here; or invoke language-specific formatters in || other files. ||  || #TODO: Add TLG & PHI text cleaners from KJ's IPython notebooks || #TODO: Add non-ascii stripper || #TODO: Add generic HTML stripper || \""\""\""",Reqmnt,Design
+6,As a workaround; we wrap the function and invoke it in __call__ method.,Design,Code
+6,FIX: tensorflow#3388,Defect,Reqmnt
+6,FIXME annoying hack for batching different sized shapes;,Code,Defect
+6,FIXME don't l2_normalize for any metric,Reqmnt,Defect
+6,FIXME: Implement this functionality,Reqmnt,Design
+6,FIXME: INDRA's section_type entry is meant to contain,Design,Defect
+6,FIXME: this is kind of hackish; but being able to simply set,Code,Defect
+6,FIXME: Use linebased diff of some types of outputs:,Reqmnt,Design
+6,IMPORTANT: keep matrices in suitable order for matrix products; failing to do so gives 8x lower performance :(,Reqmnt,Reqmnt
+6,In Python 3; the `list` call is needed to convert the iterator returned by `range` into a list.,Code,Code
+6,kernel as subkernel with a custom propagation matrix. This is a workaround!,Code,Code
+6,needed to sklearn comparability,Code,Code
+6,needed?,Code,Code
+6,self._view_controller.update(self.robot) # TODO: <- sounds like this has something to do with keyboard input...,Defect,Code
+6,TODO,Reqmnt,Reqmnt
+6,TODO,Reqmnt,Reqmnt
+6,TODO (ytz): really; we want at least one active and inactive in both scenarios.,Reqmnt,Reqmnt
+6,TODO : documentation,Doc,Reqmnt
+6,TODO : market value,Reqmnt,Reqmnt
+6,TODO add message; must specify sent_end_chars; or warn and use defaults,Reqmnt,Design
+6,TODO currently tests only run fit\/predict and compare length of predicted series,M&T,M&T
+6,TODO Figure out how to distinguish oxidation states,Reqmnt,Reqmnt
+6,TODO if without momentum; weights should not change too,Reqmnt,Reqmnt
+6,TODO make threshold a variable,Code,Reqmnt
+6,TODO optimize this method,Reqmnt,Reqmnt
+6,TODO remove later.,Code,Code
+6,TODO replace this speedup implementation with nni.compression.torch.ModelSpeedup,Reqmnt,Code
+6,TODO run start date,Reqmnt,Reqmnt
+6,TODO test more formats for ligand,M&T,M&T
+6,TODO test more formats for ligand,M&T,M&T
+6,"todo try: \"" \"".join(foo.split())",Code,Design
+6,TODO validate and normalize to \/path\/to\/variable,Reqmnt,Reqmnt
+6,TODO wouldn't it be better with a set rather than a list?,Reqmnt,Reqmnt
+6,TODO(ahundt) make more efficient,Reqmnt,Reqmnt
+6,TODO(levskaya): refactor to use newer RL friendly parameter passing.,Code,Code
+6,TODO(okuta): Implement argpartition,Reqmnt,Reqmnt
+6,TODO(okuta): Implement argpartition,Reqmnt,Reqmnt
+6,TODO(sonots): Implement in C++,Reqmnt,Design
+6,TODO(sxjscience) Consider to combine the NamedTuple and batchify functionality.,Design,Design
+6,TODO: behavior is unchanged. Could be improved.,M&T,Reqmnt
+6,TODO: check whether the model is QuartzNet,M&T,M&T
+6,ToDo: consider go\/no-go with following modification,Reqmnt,Reqmnt
+6,TO-DO: currently uses train datatset,Code,Reqmnt
+6,TODO: Debug defaults.,Defect,M&T
+6,TODO: do we need this?!,Code,Code
+6,TODO: docstring,Doc,Defect
+6,todo: enable the following line instead once the,Code,Code
+6,TODO: ensure x data shape matches model._ph['x'] shape (only if fit),Defect,M&T
+6,TODO: Extend to multifidelity problems by adding training_points = {'approx': {}},Reqmnt,Reqmnt
+6,TODO: Get rid of this,Code,Code
+6,TODO: handle Nones,Defect,Reqmnt
+6,TODO: handle other participant types,Reqmnt,Reqmnt
+6,TODO: Implement get_owners and refactor to make it prettier,Code,Code
+6,TODO: maybe add testStepTrain (and possibly some other tests) from dopamine,M&T,M&T
+6,TODO: message about vector lengths?,Doc,Reqmnt
+6,TODO: need a better way,Code,Reqmnt
+6,TODO: needs to be re-written to match new stitch datasets signature.,Code,Code
+6,TODO: optimize scheduling to support more cases.,Reqmnt,Reqmnt
+6,TODO: rebalance if output distributions are 1D instead of 1D_Var,Reqmnt,Design
+6,TODO: Remove in 0.26 when the _pairwise attribute is removed,Code,Code
+6,TODO: replace by a dict in 0.21,Reqmnt,Code
+6,ToDo: replace with 3d input; when grid_sample will start to support it,Reqmnt,Code
+6,TODO: Set interval for the original date ?,Reqmnt,Reqmnt
+6,TODO: start and end logits (TypeError: Object of type 'Tensor' is not JSON serializable),Defect,Defect
+6,TODO: This branch happens when there's only one content word,M&T,Code
+6,TODO: This matching process is slow. Make it faster; avoid loops where possible.,Reqmnt,Design
+6,TODO: turn off performance check before a better data generation,Code,M&T
+6,TODO: Use google-diff-patch-match library,Reqmnt,Reqmnt
+6,todo: We can potentially reduce memory usage by freeing memory,Reqmnt,Reqmnt
+6,TODO: we really should be more intelligent about this,Code,Reqmnt
+6,TODO: write out a few visualizations,M&T,Reqmnt
+6,TODO: Write tests for all treebanks,M&T,M&T
+6,TODO; make nicer,Code,Reqmnt
+6,XXX gs = fig.add_gridspec(15; 1),Code,Reqmnt
+6,XXX this fails: or n_pca_components == 8:,Defect,Defect
+7,((); 0); # TODO(sonots): Fix compatibility,Defect,Defect
+7,"\""\""\""Converts legacy encodings into Unicode || TODO for replacer.py: ||  - add perseus-style iota subscript and diaeresis || \""\""\""",Reqmnt,Reqmnt
+7,DEPRICATE? I don't think this is needed anymore,Code,Code
+7,dynamic_pad=True) # HACK TESTING dynamic_pad=True,M&T,M&T
+7,FIXME remove test when square_distances=True becomes the default in 0.26,Code,Code
+7,FIXME This will make sense when all controllers are in one file (like task.py),Design,Defect
+7,FIXME: Allow some diff; e.g. on repr style text in text\/plain,Reqmnt,Defect
+7,FIXME: don't show \/,Code,Reqmnt
+7,"FIXME: Return type \""None\"" of \""fit\"" incompatible with return type \""float\"" in supertype \""Model\""",Defect,Defect
+7,FIXME: this representation of covars is going to lose for caching,Reqmnt,Reqmnt
+7,in_dim=(4; 8; 8; 8); # TODO: Needs fix when giving a randon in_dim,Defect,Code
+7,needed for correct SysEx event handling,Code,Code
+7,needed to sklearn comparability,Code,Code
+7,should be WeightNorm here TODO.,Reqmnt,Code
+7,the squeeze is needed to obtain a 1D tensor,Code,Code
+7,The workaround does not support backprop; and also requires external,Design,Code
+7,This is very messy; but it's the minimal working fix to Issue #639.,Code,Code
+7,TODO,Reqmnt,Reqmnt
+7,todo,Reqmnt,Reqmnt
+7,TODO : this is quite bad in term of execution speed. We need to fix this.,Reqmnt,Defect
+7,TODO : use realtime var,Reqmnt,Reqmnt
+7,TODO add index to xls file,Reqmnt,Reqmnt
+7,TODO alpha_mean and density overlap - remove one of them,Code,Code
+7,TODO debug,M&T,Defect
+7,TODO extend to work over matrix data,Reqmnt,Reqmnt
+7,TODO implement multi-gpu training and compare performance,Reqmnt,M&T
+7,TODO init this somewhere else in a more principled way,Design,Design
+7,TODO json?,Reqmnt,Design
+7,TODO max in one tensor,Reqmnt,Reqmnt
+7,TODO merge with experiment.py,Design,M&T
+7,TODO needed?,Code,Reqmnt
+7,TODO Port to cuda?,Reqmnt,Reqmnt
+7,TODO random == uniform == randint (discrete),Reqmnt,Reqmnt
+7,TODO Remove target_type,Code,Code
+7,TODO replace with Streamlines,Reqmnt,Reqmnt
+7,TODO validate configuration and set defaults,Reqmnt,M&T
+7,TODO validation_split is not used,Code,Defect
+7,TODO we need to enable the test later.,M&T,M&T
+7,TODO(beam2d): implement mean,Reqmnt,Reqmnt
+7,TODO(sven): Add once ModelV1 is deprecated and we no longer cause circular,Code,Code
+7,TODO(vsatish): Figure out why this isn't printed.,Defect,Defect
+7,TODO:,Design,Code
+7,todo: accurate Value,Defect,Reqmnt
+7,TODO: Actually implement feature importance visualization for multiclass problems.,Reqmnt,Reqmnt
+7,TODO: build the model,Reqmnt,Reqmnt
+7,TODO: but seriously; we need to fix it!,Code,Defect
+7,TODO: change the symbol to a variable from parser_utils,Reqmnt,Code
+7,TODO: compute all the grids etc. once for the video analysis method,Reqmnt,Reqmnt
+7,TODO: consider keys with same name; cols with suffix,Reqmnt,Reqmnt
+7,TODO: consider more granular OS release extraction,Defect,Reqmnt
+7,TODO: Contribute these to MXNet?  For now it appears that registered activation types must be implemented in C++.,Design,Design
+7,TODO: decorator params: parallelization (e.g. threads; processes; async\/await; greenlets;...),Design,Reqmnt
+7,TODO: dtype,Code,Reqmnt
+7,TODO: experiment with more layers,M&T,M&T
+7,TODO: finish this,Reqmnt,Code
+7,TODO: index and name,Reqmnt,Reqmnt
+7,TODO: Instead of self.cpu(); use is_cuda to know if you can use gpu,Code,Reqmnt
+7,TODO: it is a blocking call,M&T,Code
+7,TODO: Logg INFO level,Reqmnt,M&T
+7,TODO: non-numeric columns should be ignored automatically,Reqmnt,Code
+7,TODO: Not test yet; check behavior,M&T,M&T
+7,TODO: off by one ... you fool george; sort this out,M&T,Code
+7,TODO: Remove corruption entities,Code,Code
+7,TODO: remove dummy \/ debug tasks,Code,Code
+7,TODO: set check_hash to True on final model,M&T,M&T
+7,TODO: set other defaults than those in cp.audio.filterbank for MFCCs?,Code,Design
+7,TODO: Test,M&T,M&T
+7,TODO: test that examples are executed after a no-plot and produce,M&T,M&T
+7,TODO: this is ugly; we put all the initialization work in this method; because initialization relies,Design,Design
+7,TODO: This method pulls in all the implementation dependencies into,Design,Reqmnt
+7,TODO: to be tested,M&T,M&T
+7,TODO: update nouns list with only named enitites,Reqmnt,Code
+7,TODO: Write tests,M&T,M&T
+7,WARNING: bad realtime practice (writing file) TODO: add to a memory buffer and write before exit,Reqmnt,Code
+7,Warning\/error checking needed for Reshape if channels axis split,Defect,Reqmnt
+7,XXX Accept at least the name of the population,Reqmnt,Code
+7,XXX MPL. Probably needs a refactor of plot_sensors() to work cleanly,Design,Code
+7,XXX Return a singleton list; since self._crosscat.similarity,Reqmnt,Code
+7,XXX This is silly.  We should return log densities; not densities.,Reqmnt,Reqmnt
+8,!TODO: In some cases; US is not enough to hold the complete number,Defect,Reqmnt
+8,## TODO: intercept for all models,Design,Reqmnt
+8,#TODO: improve the copying of parameters,Reqmnt,Reqmnt
+8,@TODO: code formatting issue for 20.07 release,Code,Defect
+8,@TODO: Refactor !!!,Code,Code
+8,"\""PickupAbove\"": [TODO];",Code,Reqmnt
+8,env = ScaledFloatFrame(env)  # TODO: use for dqn?,Code,Reqmnt
+8,FIXME: can I backprop error through both,Reqmnt,Defect
+8,FIXME: can use n_jobs here too,Code,Code
+8,FIXME: Hardcoded usually sucks,Code,Code
+8,FIXME: incomplete,Reqmnt,Code
+8,FIXME: Only keeping the first label,Defect,Code
+8,fixme: Why is this function called twice for each @register.tag call in template_tags.py?,Code,Defect
+8,fixme-iui  need to use wrapping increment for double or triple buffering:,Defect,Code
+8,index is Array type (TODO: Index obj),Reqmnt,Reqmnt
+8,need the shape TODO,Design,Code
+8,needed due to apparent bug in glob2 - removes duplicate entries,Defect,Code
+8,nv by ns dot ns by m -> nv by m  # TODO: Change to CSC for speed?,Code,Code
+8,Pass on diff to external difftool (TODO: store in global metadata at end instead of in separate diff dicts?),Design,Reqmnt
+8,The following identity layer is only needed so that subsequent two lambda layers can be optional.,Code,Code
+8,time to fix. TODO: optimize the crap out of this,Reqmnt,Reqmnt
+8,TODO,Code,Reqmnt
+8,TODO,Code,Reqmnt
+8,TODO - timing with beta kernels is somewhat pessimistic since it has this separate event only on the GSU path.,Defect,Reqmnt
+8,TODO (johngiorgi): write tests using a binary format file,M&T,M&T
+8,todo add other clustering?,Reqmnt,Reqmnt
+8,TODO change as soon as svhn has a val set :),Reqmnt,Code
+8,TODO change out existing code for better code below,Code,Code
+8,TODO check the start,M&T,M&T
+8,TODO combine these values to get a final prediction!,Reqmnt,Reqmnt
+8,TODO ForceSign,Reqmnt,Reqmnt
+8,TODO hack and set the eval model location inside info_space,Code,Code
+8,TODO handle 1d series; not only 2d dataframes,Reqmnt,Reqmnt
+8,ToDo handle when source and\/or target is COMPLEX:ID1_ID2_...,Reqmnt,Reqmnt
+8,TODO Implement,Reqmnt,Reqmnt
+8,TODO implement generic method,Reqmnt,Reqmnt
+8,TODO make paf_scored not part of self?,Design,Code
+8,TODO replace with pad when implemented,Reqmnt,Code
+8,todo sweep,Code,Reqmnt
+8,todo tf2: reintroduce optimizer parameters,Reqmnt,Reqmnt
+8,"TODO Traceback \""ResourceWarning: unclosed filecodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 25: ordinal not in range(128)\""",Defect,Defect
+8,todo unit tests,M&T,M&T
+8,TODO!,Reqmnt,Reqmnt
+8,TODO(b\/119775953): fix the circular dependencies.,Reqmnt,Reqmnt
+8,TODO(beam2d): Fix after supporting correct dtype promotion.,Code,Defect
+8,TODO(wakisaka): move to somewhere.,Design,Reqmnt
+8,TODO: adapt path,Reqmnt,Reqmnt
+8,TODO: add more tags based on the scikit-learn,Reqmnt,Design
+8,TODO: assertWarns exist only for Python 3.2+; test in all versions,M&T,M&T
+8,TODO: batch might have different sequence lengths,M&T,Reqmnt
+8,"TODO: calculate this centroid\""",Reqmnt,Reqmnt
+8,TODO: Can this be moved up?,Design,Code
+8,TODO: config should only be loaded once (also in database.py and enter_data.py),Code,Design
+8,TODO: do some evaluation.,M&T,M&T
+8,TODO: do this better,Reqmnt,Defect
+8,TODO: I can't manage the import issue; can you?,Defect,Defect
+8,TODO: Implement Conv Transpose,Reqmnt,Reqmnt
+8,TODO: make reshape an option for the clip_to_window op,Reqmnt,Code
+8,Todo: mock nb Gpus so all these tests can run on any device,Code,M&T
+8,TODO: Need to defing a dynamic pipeline,Design,Reqmnt
+8,TODO: num pad examples is not set here if fillup policy would be padding,Defect,Defect
+8,TODO: other types?,Reqmnt,Reqmnt
+8,TODO: precompute : empty for now,Reqmnt,Code
+8,TODO: Refactor\/simplify Configuration class so it can be used in cases,Design,Code
+8,TODO: Replace Lambda with custom Keras layer for loss.,Design,Code
+8,TODO: rotated_grids might as well give us correctly shaped array in the first place,Defect,Design
+8,TODO: store something cleaner,Code,Code
+8,TODO: Test buy to close option trades,M&T,M&T
+8,TODO: test that rebuilding multiple times works properly,M&T,M&T
+8,TODO: test this,M&T,M&T
+8,TODO: this can only be removed once the implementations of word_dropout and locked_dropout have a batch_first mode,Code,Code
+8,TODO: unify look_aside with CRFBeatDetection's interval_sigma,Design,Reqmnt
+8,XXX : can do better to avoid precision overflows,Defect,Reqmnt
+8,XXX Default number of samples drawn from my arse.,Code,Reqmnt
+8,XXX newer versions of SciPy have scipy.sparse.rand for this.,Code,Code
+8,XXX this should be supported someday,Reqmnt,Code
+8,XXX: hack; don't ask why,Code,Code
+8,XXX: How to catch dependence cycles correctly?,Reqmnt,Reqmnt
+8,XXX: Temporary solution to figure out if an estimator is a classifier,Code,Reqmnt
+9,# hackier; fixme to use regex or something,Code,Code
+9,# TODO May want to rewrite name; index; uuid; etc.,Code,Code
+9,##TODO add optimizers other than SGD,Reqmnt,Reqmnt
+9,@todo integrate Frontend and Model to that workflow,Reqmnt,Code
+9,"\""confidence\"": 1  # todo discussion confidence from GNormPlus is not provided so just putting in here 1",Code,Defect
+9,FIXME open exclusively; other celery thread might screw up,Defect,Defect
+9,FIXME: should 1 be added? the index 0 is the first sample; thus if the,Defect,Reqmnt
+9,FIXME: to be removed in 0.25,Code,Code
+9,Freeze weights - TODO: NOT IMPLEMENTED!,Reqmnt,Code
+9,'nasnet-a_large' : [TensorflowEmit; KerasEmit; PytorchEmit]; # TODO,M&T,Code
+9,probably not needed; transition,Code,Code
+9,self.mpc_sum(3; -5) TODO: Future work: how to handle gracefully minus numbers,M&T,Reqmnt
+9,Test for categorical vs. binary in hack-ey way for now...,M&T,M&T
+9,This if statement is needed to guard the cast; because batch norm,Code,Code
+9,This is needed because the pre-activation variant does not have batch,Code,Code
+9,TODO,Reqmnt,Reqmnt
+9,TODO : docs and example,Doc,Reqmnt
+9,Todo : raise error for nominal attribute,Reqmnt,Defect
+9,TODO 2- thread or parallelise block\/line processing,Reqmnt,Reqmnt
+9,TODO add bias term,Reqmnt,Reqmnt
+9,TODO add general Distribution,Reqmnt,Reqmnt
+9,TODO add introductory explanation,Reqmnt,Reqmnt
+9,TODO add nice logging,Reqmnt,Code
+9,TODO design an API interface for advanced access as an importable package,Design,Reqmnt
+9,TODO epsilon and bias are not really the same; is this a problem?,M&T,Defect
+9,TODO Implement,Reqmnt,Reqmnt
+9,TODO named tuple or enum,Code,Code
+9,TODO path validation; empty path,M&T,Code
+9,TODO remove this,Code,Code
+9,TODO rename sizes to size?,Code,Code
+9,TODO see if there is a way to make this test work - it fails on travisCI because of this:,Defect,M&T
+9,TODO update doc above,Doc,Code
+9,TODO we are conditioning on a postive treatment,Reqmnt,Reqmnt
+9,TODO(ahundt) consider removing this dependency,Code,Code
+9,TODO(rathodv): Come up with a better way to generate scope names,Reqmnt,Design
+9,TODO(rliaw): This behavior is probably undesirable; but right now,Reqmnt,Code
+9,TODO(tokunaga): the number of processes should be configurable,Reqmnt,Reqmnt
+9,TODO:,Code,Reqmnt
+9,TODO:,Reqmnt,Reqmnt
+9,TODO:   2014-07-10 16:38:27 by Brian McFee <brm2132@columbia.edu>,Design,Reqmnt
+9,TODO: Add a test for ignore_sep=False,M&T,M&T
+9,TODO: avoid reduce for obvious cases like no center and large 1D_Block,Code,Reqmnt
+9,TODO: black box attacks,Reqmnt,M&T
+9,TODO: Break the graph only nGPU times instead of nb_iter times.,Code,Code
+9,TODO: Check if owner is deleting.,Reqmnt,M&T
+9,TODO: check if stride of 2 causes alignment issues if the featuremap,Defect,M&T
+9,TODO: compute signed distance between walls,Reqmnt,Reqmnt
+9,TODO: double check if this is still true in 1.9.0,M&T,M&T
+9,TODO: extend to other key types,Reqmnt,Reqmnt
+9,TODO: extract an eval func more robustly,Reqmnt,Reqmnt
+9,TODO: figure out while empty documents are being returned,Defect,M&T
+9,TODO: fix estimator check for AutoEncoder,Defect,M&T
+9,TODO: fix read whole wiki,Defect,Code
+9,TODO: here; and every time we use this 999 number; find a cleaner\/better way,Design,Reqmnt
+9,TODO: more specific types?,Reqmnt,Reqmnt
+9,TODO: new style for confusion matrix (using small and big dot),Reqmnt,Reqmnt
+9,TODO: please download the dataset from,Reqmnt,Code
+9,TODO: programmatically check wether these are indeed features (predict; correct),Reqmnt,M&T
+9,TODO: put in infrastructure to fold over trace as it's built.,Reqmnt,Reqmnt
+9,TODO: raise error in 1.1 instead,Defect,Defect
+9,TODO: Remove in 1.2,Code,Code
+9,TODO: remove this check once the estimator is no longer experimental.,Code,Code
+9,TODO: replace this with MTTask,Code,Code
+9,todo: should save tpot model here,Reqmnt,Code
+9,TODO: Should this be called self.network for continuity?,Code,Reqmnt
+9,TODO: TF has unsorted_segment_max; which can accelerate _max_on on batched graph,Reqmnt,Reqmnt
+9,TODO: This breaks layer sharing. Does it matter for this class?,Defect,Defect
+9,TODO: verify if it is working,M&T,M&T
+9,TODO: we may support size = -1 in the future,Reqmnt,Reqmnt
+9,TODO: would be good to add ref from source,Code,Reqmnt
+9,TODO: write index,Reqmnt,Reqmnt
+9,workaround for bugs.python.org\/issue11159,Code,Code
+9,XXX add more info,Doc,Code
+9,XXX backward compatibility,Reqmnt,Reqmnt
+9,XXX copy_() ?,Code,Code
+9,XXX JRK: Should this test whether test_times if a DecodingTime,M&T,Code
+9,XXX might possibly be slow solution; but every worker needs reseted LDA model for every iteration,Defect,Reqmnt
+9,XXX: don't know which way would be the best,Code,Code
+9,XXX: Ugly,Code,Code
